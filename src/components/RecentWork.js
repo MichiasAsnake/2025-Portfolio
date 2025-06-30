@@ -134,7 +134,7 @@ function RecentWork() {
           <h2>My Recent Work</h2>
           <WorkCard
             title="Whats Trending"
-            desc="Displays trending videos, comments, and phrases on tiktok."
+            desc="Displays trending videos, comments, and phrases using the TikTok API."
             tags={[
               { src: "/js for card.png", alt: "JavaScript" },
               { src: "/python for card.png", alt: "Python" },
