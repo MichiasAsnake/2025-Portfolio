@@ -15,7 +15,7 @@
   background: #fff;
   border: 2px solid #bcdcff;
   border-radius: 18px;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 3rem 3rem 3rem 3rem;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@
   background: #a3c8f7;
 }
 .work-info-block {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   width: 100%;
 }
 .work-info-title {
@@ -78,68 +78,111 @@
 .work-cards-stack {
   display: flex;
   flex-direction: column;
-  gap: 1.7rem;
+  gap: 2.5rem;
   width: 100%;
 }
 .work-cards-stack h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.2rem;
   margin-top: 0;
+  font-size: 2rem;
+  margin: 0 auto;
   color: #111;
-  font-family: "Okomito", Arial, sans-serif;
+  font-family: "Satoshi", Arial, sans-serif;
 }
 .work-card {
-  background: #fff;
-  border: 2px solid #bcdcff;
-  border-radius: 18px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
-  padding: 1.5rem 2rem;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  align-items: flex-start;
+  background: #fff;
+  border: 1.5px solid #bcdcff;
+  border-radius: 24px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  min-width: 340px;
+  max-width: 900px;
+  min-height: 260px;
+  max-height: 600px;
+  margin: 0 auto;
   gap: 2.5rem;
-  min-height: 140px;
-}
-.work-card-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 2 1 220px;
-  min-width: 180px;
-  gap: 0.5rem;
-}
-.work-card-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 0.2rem;
-  color: #222;
-  font-family: "Okomito", Arial, sans-serif;
-}
-.work-card-desc {
-  font-size: 1.05rem;
-  color: #444;
-  margin-bottom: 0.2rem;
-  font-family: "Satoshi", Arial, sans-serif;
-}
-.work-card-tags {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.2rem;
-  font-size: 1rem;
-  color: #3578e5;
-  font-family: "Satoshi", Arial, sans-serif;
 }
 .work-card-img {
-  flex: 1 1 180px;
-  min-width: 120px;
-  min-height: 80px;
-  background: #f8fbff;
-  border-radius: 12px;
+  width: 360px;
+  height: 270px;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: auto;
+  background: #f5f7fa;
+  flex-shrink: 0;
+}
+.work-card-link img,
+.work-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  background: #f5f7fa;
+}
+.work-card-title {
+  font-size: 1.7rem;
+  color: #222;
+  font-family: "Okomito Medium", Arial, sans-serif;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  margin-top: 0.2rem;
+}
+.work-card-desc {
+  font-size: 1.25rem;
+  color: #b0b0b0;
+  font-family: "Satoshi", Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 0.7rem;
+  margin-top: 0;
+}
+.work-card-tags {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: auto;
+  margin-bottom: 0.2rem;
+}
+.work-card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.work-card-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.work-card-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.work-card-link:hover img {
+  transform: scale(1.02);
+}
+.work-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.work-card-left {
+  max-width: 260px;
+  min-width: 200px;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 @media (max-width: 1000px) {
   .recent-work-grid {
@@ -166,6 +209,28 @@
     width: 100%;
   }
 }
+@media (max-width: 700px) {
+  .work-card {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    min-width: unset;
+    max-width: 99vw;
+    min-height: 320px;
+    max-height: unset;
+  }
+  .work-card-img {
+    height: 160px;
+  }
+  .work-card-title {
+    font-size: 1.3rem;
+  }
+  .work-card-desc {
+    font-size: 1rem;
+  }
+  .icon-tag {
+    width: 28px;
+    height: 28px;
+  }
+}
 .icon-tech {
   width: 28px;
   height: 28px;
@@ -179,8 +244,11 @@
   margin-right: 0.3rem;
 }
 .icon-tag {
-  width: 32px;
-  height: 32px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
-  margin-right: 0.2rem;
+  border-radius: 6px;
+  background: #f5f7fa;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 3px;
 }

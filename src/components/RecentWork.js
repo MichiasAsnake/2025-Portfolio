@@ -99,13 +99,15 @@ function RecentWork() {
             ]}
             imageSrc="/whats trending.PNG"
             imageAlt="Whats Trending Screenshot"
+            link="https://tiktok-stories.vercel.app/"
           />
           <WorkCard
-            title="JobsSpot"
+            title="JobSight"
             desc="Co workers needed to separate order colors efficiently - so i built this chrome extension."
             tags={[{ src: "/python for card.png", alt: "Python" }]}
             imageSrc="/JobsSpot.PNG"
             imageAlt="JobsSpot Screenshot"
+            link="https://github.com/MichiasAsnake/Spindle"
           />
           <WorkCard
             title="Coolor"
@@ -115,7 +117,8 @@ function RecentWork() {
               { src: "/python for card.png", alt: "Python" },
             ]}
             imageSrc="/COolor.PNG"
-            imageAlt="JobsSpot Screenshot"
+            imageAlt="Coolor Screenshot"
+            link="https://cheerful-fenglisu-7444ee.netlify.app/homepage.html"
           />
         </div>
       </div>

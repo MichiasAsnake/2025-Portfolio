@@ -20,8 +20,8 @@
   flex-direction: row;
   align-items: stretch;
   width: 80vw;
-  max-width: 900px;
-  min-height: 340px;
+  max-width: 1200px;
+  min-height: 500px;
   border: 2px solid #bcdcff;
   border-radius: 18px;
   background: #fff;
@@ -37,9 +37,15 @@
   border-radius: 16px 0 0 16px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 300px;
   line-height: 1.5;
   font-family: "Okomito", Arial, sans-serif;
 }
+.about-bio p {
+  width: 70%;
+}
+
 .about-img {
   flex: 1 1 0;
   display: flex;

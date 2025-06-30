@@ -7,6 +7,17 @@
   flex-direction: column;
   align-items: center;
 }
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: 600;
+
+  color: #111;
+  text-align: center;
+  margin: 2.5rem 0 0.5rem 0;
+  font-family: "Satoshi", Arial, sans-serif;
+}
+
 .contact-card {
   display: flex;
   flex-direction: row;
@@ -86,4 +97,113 @@
     border-radius: 0 0 12px 12px;
     padding: 1.2rem;
   }
+}
+
+.send-button {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.send-button:hover {
+  background-color: #0052cc;
+}
+
+.send-button:active {
+  transform: translateY(1px);
+}
+
+/* Success Message Animation */
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #4caf50;
+  color: white;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  animation: slideInDown 0.5s ease-out;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.success-icon {
+  font-size: 24px;
+  font-weight: bold;
+  animation: checkmark 0.6s ease-in-out 0.2s both;
+}
+
+.success-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Loading State */
+.send-button.sending {
+  background-color: #666;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.send-button.sending::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled Form Fields */
+.contact-form input:disabled,
+.contact-form textarea:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.7;
 }

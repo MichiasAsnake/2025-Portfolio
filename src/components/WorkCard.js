@@ -1,6 +1,6 @@
 import React from "react";
 
-function WorkCard({ title, desc, tags, imageSrc, imageAlt }) {
+function WorkCard({ title, desc, tags, imageSrc, imageAlt, link }) {
   return (
     <div className="work-card">
       <div className="work-card-left">
@@ -18,11 +18,26 @@ function WorkCard({ title, desc, tags, imageSrc, imageAlt }) {
         </div>
       </div>
       <div className="work-card-img">
-        <img
-          src={process.env.PUBLIC_URL + imageSrc}
-          alt={imageAlt}
-          style={{ width: "100%", borderRadius: "12px" }}
-        />
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="work-card-link"
+          >
+            <img
+              src={process.env.PUBLIC_URL + imageSrc}
+              alt={imageAlt}
+              style={{ width: "100%", borderRadius: "12px" }}
+            />
+          </a>
+        ) : (
+          <img
+            src={process.env.PUBLIC_URL + imageSrc}
+            alt={imageAlt}
+            style={{ width: "100%", borderRadius: "12px" }}
+          />
+        )}
       </div>
     </div>
   );
