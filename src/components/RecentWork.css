@@ -37,10 +37,75 @@
   padding: 1rem 0;
   margin-bottom: 1.5rem;
   cursor: pointer;
-  transition: background 0.18s;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
-.resume-btn:hover {
+.resume-btn:hover:not(:disabled) {
   background: #a3c8f7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(188, 220, 255, 0.4);
+}
+.resume-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+.resume-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+/* Downloading animation */
+.resume-btn.downloading {
+  background: #4caf50;
+  color: transparent;
+  animation: pulse 1.5s infinite;
+}
+.resume-btn.downloading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Success animation */
+.resume-btn.downloading:not(:disabled) {
+  animation: successPulse 0.6s ease-out;
+}
+@keyframes successPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .work-info-block {
   margin-bottom: 2.5rem;
@@ -57,6 +122,7 @@
   display: flex;
   gap: 0.7rem;
   margin-bottom: 0.7rem;
+  align-items: center;
 }
 .work-info-email-row {
   display: flex;
@@ -251,4 +317,14 @@
   background: #f5f7fa;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   padding: 3px;
+}
+.social-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+.social-link:hover {
+  transform: translateY(-2px);
 }

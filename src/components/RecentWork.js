@@ -1,26 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import "./RecentWork.css";
 import WorkCard from "./WorkCard";
 
 function RecentWork() {
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleResumeDownload = () => {
+    setIsDownloading(true);
+
+    // Create a link element to trigger download
+    const link = document.createElement("a");
+    link.href = process.env.PUBLIC_URL + "/Michias_Asnake_Resume.pdf";
+    link.download = "Michias_Asnake_Resume.pdf";
+    link.target = "_blank";
+
+    // Add to DOM, click, and remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Reset animation after 2 seconds
+    setTimeout(() => {
+      setIsDownloading(false);
+    }, 2000);
+  };
+
   return (
     <section className="recent-work" id="work">
       <div className="recent-work-grid">
         <aside className="work-info-sticky">
-          <button className="resume-btn">Download Resume</button>
+          <button
+            className={`resume-btn ${isDownloading ? "downloading" : ""}`}
+            onClick={handleResumeDownload}
+            disabled={isDownloading}
+          >
+            {isDownloading ? "Downloading..." : "Download Resume"}
+          </button>
           <div className="work-info-block">
             <div className="work-info-title">Connect with me!</div>
             <div className="work-info-socials">
-              <img
-                src={process.env.PUBLIC_URL + "/indeed.png"}
-                alt="LinkedIn"
-                className="icon-social"
-              />
-              <img
-                src={process.env.PUBLIC_URL + "/git.png"}
-                alt="GitHub"
-                className="icon-social"
-              />
+              <a
+                href="https://www.linkedin.com/in/michiasasnake/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + "/indeed.png"}
+                  alt="LinkedIn"
+                  className="icon-social"
+                />
+              </a>
+              <a
+                href="https://github.com/MichiasAsnake"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <img
+                  src={process.env.PUBLIC_URL + "/git.png"}
+                  alt="GitHub"
+                  className="icon-social"
+                />
+              </a>
             </div>
             <div className="work-info-email-row">
               <span className="work-info-arrow">→</span>

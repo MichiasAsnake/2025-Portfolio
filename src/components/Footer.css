@@ -7,10 +7,9 @@
   align-items: center;
   justify-content: space-between;
   min-height: 56px;
-  width: 100%;
-  max-width: 100%;
+
   border-radius: 18px 18px 0 0;
-  position: relative;
+
   font-size: 1.1rem;
 }
 .footer-left {
