@@ -158,7 +158,7 @@ function RecentWork() {
               { src: "/js for card.png", alt: "JavaScript" },
               { src: "/python for card.png", alt: "Python" },
             ]}
-            imageSrc="/COolor.PNG"
+            imageSrc="/COolor.png"
             imageAlt="Coolor Screenshot"
             link="https://cheerful-fenglisu-7444ee.netlify.app/homepage.html"
           />
