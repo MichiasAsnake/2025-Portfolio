@@ -6,7 +6,14 @@ function Hero() {
     <section className="hero" id="home">
       <div className="hero-inner">
         <div className="hero-avatar">
-          <img src="large wave smile blue.svg" alt="wave smile blue" />
+          <video
+            src={process.env.PUBLIC_URL + "/loop.mp4"}
+            alt="wave smile blue"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
         </div>
         <div className="hero-content">
           <h1>Welcome! I'm Michias</h1>
