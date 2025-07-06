@@ -146,7 +146,7 @@ function RecentWork() {
           <WorkCard
             title="JobSight"
             desc="Co workers needed to separate order colors efficiently - so i built this chrome extension."
-            tags={[{ src: "/python for card.png", alt: "Python" }]}
+            tags={[{ src: "/js for card.png", alt: "JavaScript" }]}
             imageSrc="/JobsSpot.PNG"
             imageAlt="JobsSpot Screenshot"
             link="https://github.com/MichiasAsnake/Spindle"
@@ -154,10 +154,7 @@ function RecentWork() {
           <WorkCard
             title="Coolor"
             desc="Creates unique color palettes that can be used in any project."
-            tags={[
-              { src: "/js for card.png", alt: "JavaScript" },
-              { src: "/python for card.png", alt: "Python" },
-            ]}
+            tags={[{ src: "/js for card.png", alt: "JavaScript" }]}
             imageSrc="/COolor.png"
             imageAlt="Coolor Screenshot"
             link="https://cheerful-fenglisu-7444ee.netlify.app/homepage.html"

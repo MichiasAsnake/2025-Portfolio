@@ -49,6 +49,14 @@ body {
   color: #222;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  overflow-x: hidden;
 }
 
 code {
@@ -77,4 +85,17 @@ h6,
 }
 .body-okomito {
   font-family: "Okomito", Arial, sans-serif;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }

@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .timeline-track {
@@ -13,7 +14,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  width: 90vw;
+  width: 85vw;
   max-width: 1100px;
   margin: 0 auto 0.5rem auto;
   position: relative;
@@ -22,11 +23,11 @@
 
 .timeline-item {
   flex: 1 1 0;
-  min-width: 180px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0.5vw;
+  margin: 0 0.25rem;
 }
 
 .timeline-logo-job {
@@ -34,6 +35,8 @@
   flex-direction: row;
   align-items: center;
   gap: 1.1rem;
+  width: 100%;
+  justify-content: center;
 }
 
 .timeline-logo {
@@ -44,6 +47,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   margin-bottom: 0;
+  flex-shrink: 0;
 }
 
 .timeline-job-text {
@@ -52,6 +56,7 @@
   align-items: flex-start;
   justify-content: center;
   margin-left: 0.2rem;
+  min-width: 0;
 }
 
 .timeline-job-title {
@@ -60,6 +65,7 @@
   color: #111;
   line-height: 1.1;
   font-family: "Okomito", Arial, sans-serif;
+  white-space: nowrap;
 }
 
 .timeline-job-role {
@@ -68,13 +74,14 @@
   font-weight: 400;
   line-height: 1.1;
   font-family: "Okomito", Arial, sans-serif;
+  white-space: nowrap;
 }
 
 .timeline-bar-row {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 92vw;
+  width: 87vw;
   max-width: 1150px;
   margin: 0 auto;
   position: relative;
@@ -91,6 +98,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 0.5rem;
+  min-width: 0;
 }
 
 .timeline-dot {
@@ -103,6 +111,7 @@
   position: relative;
   z-index: 2;
   margin-left: 20%;
+  flex-shrink: 0;
 }
 
 .timeline-dot:first-child {
@@ -118,12 +127,14 @@
   align-items: center;
   margin-left: auto;
   position: relative;
+  flex-shrink: 0;
 }
 
 .timeline-arrow-svg svg {
   display: block;
   width: 38px;
   height: 18px;
+  max-width: 100%;
 }
 
 .timeline-year {
@@ -133,6 +144,7 @@
   min-width: 70px;
   text-align: center;
   font-family: "Satoshi", Arial, sans-serif;
+  flex-shrink: 0;
 }
 
 .timeline-year-left {
@@ -146,24 +158,77 @@
 @media (max-width: 900px) {
   .timeline-track,
   .timeline-bar-row {
-    width: 98vw;
-    max-width: 99vw;
+    width: 92vw;
+    max-width: 92vw;
   }
+
+  .timeline-item {
+    margin: 0 0.1rem;
+  }
+
   .timeline-year {
     font-size: 1.2rem;
     min-width: 40px;
   }
+
   .timeline-logo {
     height: 36px;
     width: 36px;
   }
+
   .timeline-logo-job {
     gap: 0.5rem;
   }
+
   .timeline-job-title {
     font-size: 1rem;
   }
+
   .timeline-job-role {
     font-size: 0.95rem;
+  }
+
+  .timeline-bar {
+    margin: 0 0.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-track,
+  .timeline-bar-row {
+    width: 95vw;
+    max-width: 95vw;
+  }
+
+  .timeline-item {
+    margin: 0 0.05rem;
+  }
+
+  .timeline-logo-job {
+    gap: 0.3rem;
+  }
+
+  .timeline-job-title {
+    font-size: 0.9rem;
+  }
+
+  .timeline-job-role {
+    font-size: 0.85rem;
+  }
+
+  .timeline-year {
+    font-size: 1rem;
+    min-width: 30px;
+  }
+
+  .timeline-arrow-svg svg {
+    width: 30px;
+    height: 14px;
+  }
+
+  .timeline-dot {
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
   }
 }

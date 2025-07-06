@@ -21,9 +21,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  min-width: 600px;
-  min-height: 320px;
+  width: clamp(200px, 40vw, 600px);
+  min-width: clamp(200px, 40vw, 600px);
+  min-height: clamp(200px, 30vw, 320px);
 }
 
 .hero-avatar video {
@@ -40,28 +40,25 @@
   justify-content: center;
 }
 .hero-content h1 {
-  font-size: 2.7rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 500;
   margin: 0 0 0.2rem 0;
   color: #111;
   padding-bottom: 0.5rem;
   font-family: "Okomito", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 3.5rem;
 }
 
 .hero-content p {
   font-weight: 400;
   font-family: "Satoshi Medium", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
   padding-bottom: 3rem;
   color: #ababab;
 }
 
 .subtitle {
   color: #bbb;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 500;
   margin: 0 0 0.5rem 0;
   font-family: "Satoshi", Arial, sans-serif;
@@ -71,7 +68,7 @@
   align-items: center;
   gap: 0.5rem;
   margin-top: 0.2rem;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-family: "Satoshi", Arial, sans-serif;
   font-weight: 400;
 }
@@ -88,9 +85,47 @@
   .hero-inner {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
   }
   .hero-content {
     align-items: center;
     text-align: center;
+  }
+  .hero-avatar {
+    width: 300px;
+    min-width: 300px;
+    min-height: 240px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  .hero-location-row {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-avatar {
+    width: 250px;
+    min-width: 250px;
+    min-height: 200px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .hero-location-row {
+    font-size: 1rem;
   }
 }

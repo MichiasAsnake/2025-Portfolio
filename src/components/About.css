@@ -1,11 +1,11 @@
 .about {
   width: 100%;
   max-width: 100%;
-
   padding: 0 0 3rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 .about-heading {
   text-align: center;
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  width: 80vw;
+  width: 85vw;
   max-width: 1200px;
   min-height: 500px;
   border: 2px solid #bcdcff;
@@ -65,22 +65,53 @@
 }
 @media (max-width: 900px) {
   .about-card {
-    flex-direction: column;
-    min-height: unset;
-    width: 96vw;
-    max-width: 98vw;
+    flex-direction: row;
+    min-height: 300px;
+    width: 92vw;
+    max-width: 92vw;
   }
   .about-bio {
-    border-radius: 16px 16px 0 0;
-    padding: 2rem 1.2rem;
-    font-size: 1.1rem;
+    border-radius: 16px 0 0 16px;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    flex: 1.5;
+  }
+  .about-bio p {
+    width: 100%;
   }
   .about-img {
-    padding: 1.2rem;
+    padding: 1rem;
+    flex: 1;
   }
   .about-img img {
-    width: 180px;
-    height: 180px;
-    border-radius: 24px;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-card {
+    min-height: 250px;
+    width: 95vw;
+    max-width: 95vw;
+  }
+  .about-bio {
+    padding: 1rem 0.8rem;
+    font-size: 0.9rem;
+    flex: 1.8;
+  }
+  .about-img {
+    padding: 0.8rem;
+    flex: 1;
+  }
+  .about-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+  }
+  .about-heading {
+    font-size: 1.5rem;
+    margin: 2rem 0 1.5rem 0;
   }
 }
