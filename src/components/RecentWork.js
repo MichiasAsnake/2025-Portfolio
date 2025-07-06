@@ -102,6 +102,11 @@ function RecentWork() {
                 alt="Next.js"
                 className="icon-tech"
               />
+              <img
+                src={process.env.PUBLIC_URL + "/cursor 1.png"}
+                alt="Cursor"
+                className="icon-tech"
+              />
             </div>
           </div>
           <div className="work-info-block">
