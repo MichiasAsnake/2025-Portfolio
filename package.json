@@ -6,6 +6,7 @@
     "@emailjs/browser": "^4.4.1",
     "@react-three/drei": "^10.4.4",
     "@react-three/fiber": "^9.2.0",
+    "@splinetool/react-spline": "^4.0.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
