@@ -58,7 +58,7 @@ function RecentWork() {
                 className="social-link"
               >
                 <img
-                  src={process.env.PUBLIC_URL + "/github.svg"}
+                  src={process.env.PUBLIC_URL + "/Github.svg"}
                   alt="GitHub"
                   className="icon-social"
                 />
