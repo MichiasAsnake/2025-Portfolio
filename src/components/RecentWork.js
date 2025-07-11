@@ -149,6 +149,14 @@ function RecentWork() {
             link="https://github.com/MichiasAsnake/OrderMind"
           />
           <WorkCard
+            title="JobSpot"
+            desc="Created a job board that aggregates listings from major sites using the JSearch API, with filters for job type and location, and direct links to apply."
+            tags={[{ src: "/React.svg", alt: "React" }]}
+            imageSrc="/JobSSSpot.png"
+            imageAlt="JobSpot Screenshot"
+            link="https://github.com/MichiasAsnake/JobsSpot"
+          />
+          <WorkCard
             title="Whats Trending"
             desc="Displays trending videos, comments, and phrases using the TikTok API."
             tags={[
@@ -166,14 +174,6 @@ function RecentWork() {
             imageSrc="/JobsSpot.PNG"
             imageAlt="JobsSpot Screenshot"
             link="https://github.com/MichiasAsnake/Spindle"
-          />
-          <WorkCard
-            title="Coolor"
-            desc="Creates unique color palettes that can be used in any project."
-            tags={[{ src: "/Javascript.svg", alt: "JavaScript" }]}
-            imageSrc="/COolor.png"
-            imageAlt="Coolor Screenshot"
-            link="https://cheerful-fenglisu-7444ee.netlify.app/homepage.html"
           />
         </div>
       </div>

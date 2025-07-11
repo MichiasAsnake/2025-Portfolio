@@ -1,4 +1,10 @@
 .footer {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   background: #bcdcff;
   color: #fff;
   padding: 1.2rem 2rem;
