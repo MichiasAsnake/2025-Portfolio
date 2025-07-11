@@ -11,7 +11,7 @@ function Footer() {
           rel="noopener noreferrer"
         >
           <img
-            src={process.env.PUBLIC_URL + "/indeed.png"}
+            src={process.env.PUBLIC_URL + "/Linkedin.svg"}
             alt="LinkedIn"
             className="footer-icon"
           />
@@ -22,7 +22,7 @@ function Footer() {
           rel="noopener noreferrer"
         >
           <img
-            src={process.env.PUBLIC_URL + "/git.png"}
+            src={process.env.PUBLIC_URL + "/github.svg"}
             alt="GitHub"
             className="footer-icon"
           />

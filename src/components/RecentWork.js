@@ -40,13 +40,13 @@ function RecentWork() {
             <div className="work-info-title">Connect with me!</div>
             <div className="work-info-socials">
               <a
-                href="https://www.linkedin.com/in/michiasasnake/"
+                href="https://www.linkedin.com/in/michias-asnake-0000000000/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link"
               >
                 <img
-                  src={process.env.PUBLIC_URL + "/indeed.png"}
+                  src={process.env.PUBLIC_URL + "/Linkedin.svg"}
                   alt="LinkedIn"
                   className="icon-social"
                 />
@@ -58,7 +58,7 @@ function RecentWork() {
                 className="social-link"
               >
                 <img
-                  src={process.env.PUBLIC_URL + "/git.png"}
+                  src={process.env.PUBLIC_URL + "/github.svg"}
                   alt="GitHub"
                   className="icon-social"
                 />
@@ -73,37 +73,37 @@ function RecentWork() {
             <div className="work-info-title">What I Build With</div>
             <div className="work-info-icons">
               <img
-                src={process.env.PUBLIC_URL + "/JS.png"}
+                src={process.env.PUBLIC_URL + "/Javascript.svg"}
                 alt="JavaScript"
                 className="icon-tech"
               />
               <img
-                src={process.env.PUBLIC_URL + "/PYTHON.png"}
+                src={process.env.PUBLIC_URL + "/Python.svg"}
                 alt="Python"
                 className="icon-tech"
               />
               <img
-                src={process.env.PUBLIC_URL + "/REACT.png"}
+                src={process.env.PUBLIC_URL + "/React.svg"}
                 alt="React"
                 className="icon-tech"
               />
               <img
-                src={process.env.PUBLIC_URL + "/NODE.png"}
+                src={process.env.PUBLIC_URL + "/Node.svg"}
                 alt="Node.js"
                 className="icon-tech"
               />
               <img
-                src={process.env.PUBLIC_URL + "/WORDPRESS.png"}
+                src={process.env.PUBLIC_URL + "/wordpress.svg"}
                 alt="WordPress"
                 className="icon-tech"
               />
               <img
-                src={process.env.PUBLIC_URL + "/NEXT.png"}
+                src={process.env.PUBLIC_URL + "/Nextjs.svg"}
                 alt="Next.js"
                 className="icon-tech"
               />
               <img
-                src={process.env.PUBLIC_URL + "/cursor 1.png"}
+                src={process.env.PUBLIC_URL + "/cursor 1.svg"}
                 alt="Cursor"
                 className="icon-tech"
               />
@@ -113,22 +113,22 @@ function RecentWork() {
             <div className="work-info-title">Design Tools</div>
             <div className="work-info-icons">
               <img
-                src={process.env.PUBLIC_URL + "/FIGMA.png"}
+                src={process.env.PUBLIC_URL + "/Figma.svg"}
                 alt="Figma"
                 className="icon-tech"
               />
               <img
-                src={process.env.PUBLIC_URL + "/AI.png"}
+                src={process.env.PUBLIC_URL + "/Adobe Illustrator.svg"}
                 alt="Adobe Illustrator"
                 className="icon-tech"
               />
               <img
-                src={process.env.PUBLIC_URL + "/TAILWIND.png"}
+                src={process.env.PUBLIC_URL + "/Tailwind.svg"}
                 alt="Tailwind CSS"
                 className="icon-tech"
               />
               <img
-                src={process.env.PUBLIC_URL + "/BOOTSTRAP.png"}
+                src={process.env.PUBLIC_URL + "/Bootstrap.svg"}
                 alt="Bootstrap"
                 className="icon-tech"
               />
@@ -138,11 +138,22 @@ function RecentWork() {
         <div className="work-cards-stack">
           <h2>My Recent Work</h2>
           <WorkCard
+            title="OrderMind"
+            desc="Query order status, customer info, and rush jobs using natural language - powered by OpenAI, Pinecone, and real-time API data."
+            tags={[
+              { src: "/Nextjs.svg", alt: "Next.js" },
+              { src: "/Javascript.svg", alt: "TypeScript" },
+            ]}
+            imageSrc="/OrderMind.png"
+            imageAlt="OrderMind Screenshot"
+            link="https://github.com/MichiasAsnake/OrderMind"
+          />
+          <WorkCard
             title="Whats Trending"
             desc="Displays trending videos, comments, and phrases using the TikTok API."
             tags={[
-              { src: "/js for card.png", alt: "JavaScript" },
-              { src: "/python for card.png", alt: "Python" },
+              { src: "/Javascript.svg", alt: "JavaScript" },
+              { src: "/Python.svg", alt: "Python" },
             ]}
             imageSrc="/whats trending.PNG"
             imageAlt="Whats Trending Screenshot"
@@ -151,7 +162,7 @@ function RecentWork() {
           <WorkCard
             title="JobSight"
             desc="Co workers needed to separate order colors efficiently - so i built this chrome extension."
-            tags={[{ src: "/js for card.png", alt: "JavaScript" }]}
+            tags={[{ src: "/Javascript.svg", alt: "JavaScript" }]}
             imageSrc="/JobsSpot.PNG"
             imageAlt="JobsSpot Screenshot"
             link="https://github.com/MichiasAsnake/Spindle"
@@ -159,7 +170,7 @@ function RecentWork() {
           <WorkCard
             title="Coolor"
             desc="Creates unique color palettes that can be used in any project."
-            tags={[{ src: "/js for card.png", alt: "JavaScript" }]}
+            tags={[{ src: "/Javascript.svg", alt: "JavaScript" }]}
             imageSrc="/COolor.png"
             imageAlt="Coolor Screenshot"
             link="https://cheerful-fenglisu-7444ee.netlify.app/homepage.html"
