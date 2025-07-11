@@ -22,7 +22,7 @@ function Footer() {
           rel="noopener noreferrer"
         >
           <img
-            src={process.env.PUBLIC_URL + "/github.svg"}
+            src={process.env.PUBLIC_URL + "/Github.svg"}
             alt="GitHub"
             className="footer-icon"
           />

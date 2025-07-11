@@ -144,7 +144,7 @@ function RecentWork() {
               { src: "/Nextjs.svg", alt: "Next.js" },
               { src: "/Javascript.svg", alt: "TypeScript" },
             ]}
-            imageSrc="/OrderMind.png"
+            imageSrc="/OrderMind.PNG"
             imageAlt="OrderMind Screenshot"
             link="https://github.com/MichiasAsnake/OrderMind"
           />
