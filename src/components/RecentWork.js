@@ -10,7 +10,7 @@ function RecentWork() {
 
     // Create a link element to trigger download
     const link = document.createElement("a");
-    link.href = process.env.PUBLIC_URL + "/Michias_Asnake_Resume.pdf";
+    link.href = process.env.PUBLIC_URL + "/Michias Asnake Resume.pdf";
     link.download = "Michias_Asnake_Resume.pdf";
     link.target = "_blank";
 
