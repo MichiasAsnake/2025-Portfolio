@@ -41,7 +41,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="inline-flex justify-center fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-md transition-all duration-300 [transition-property:background-color,backdrop-filter]">
+    <nav className="inline-flex justify-center fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-md transition-all duration-300 [transition-property:background-color,backdrop-filter] [mask-image:linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)]">
       <ul
         className="inline-flex flex-wrap justify-center items-center backdrop-blur-md rounded-full bg-[#bcdcff]/80 shadow-lg mx-auto my-4 px-6 py-2 gap-8 md:gap-6 sm:gap-3 w-auto"
         style={{ minWidth: 0 }}
