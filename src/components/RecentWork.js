@@ -154,7 +154,7 @@ function RecentWork() {
             tags={[{ src: "/React.svg", alt: "React" }]}
             imageSrc="/JobSSSpot.png"
             imageAlt="JobSpot Screenshot"
-            link="https://github.com/MichiasAsnake/JobsSpot"
+            link="https://jobsspot.netlify.app/"
           />
           <WorkCard
             title="Whats Trending"
